@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Money Tracker-Praneeth</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      body{
+        background-color: black;
+      }
+        .collapse-item::before {
+          content: "\f107";
+          font-family: "FontAwesome";
+          padding-right: 8px;
+        }
+        .collapse-item[aria-expanded="true"]::before {
+          content: "\f106";
+        }
+        .currency-selector {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding-left: .5rem;
+          border: 0;
+          background: transparent;
+          -webkit-appearance:none;
+          -moz-appearance:none;
+          appearance:none;
+          background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1024' height='640'><path d='M1017 68L541 626q-11 12-26 12t-26-12L13 68Q-3 49 6 24.5T39 0h952q24 0 33 24.5t-7 43.5z'></path></svg>") 90%/12px 6px no-repeat;
+          font-family: inherit;
+          color: inherit;
+        }
+
+        .currency-amount {
+          text-align: right;
+        }
+
+        .currency-addon {
+          width: 6em;
+          text-align: left;
+          position: relative;
+        }
+        
+      </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Transactions</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reports</a>
+                    </li>
+                <li class="nav-item">
+                <a class="nav-link">Settings</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container bg-light shadow p-3 mt-3 bg-body-tertiary rounded">
+        <div class="row">
+            <div class="col-5">
+                <h5 class="collapse-item" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                        NET WORTH
+                    <p class="pull-right text-success">
+                        3000000
+                    </p>
+                </h5>
+                  <div class="collapse accordion show" id="collapseExample">
+                        <div class="accordion-item">
+                            <div class="accordion-header bg-body-secondary p-2 fs-6" role="button" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  
+                                <p class="d-inline fw-bold">
+                                  Cash
+                                </p>
+                                <p class="d-inline pull-right text-success">
+                                  350000
+                                </p>
+                              </div>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="fs-6 p-3">
+                                  <p class="d-inline text-primary">
+                                    Amma's Wallet
+                                  </p>
+                                  <p class="d-inline pull-right text-success">
+                                    100000
+                                  </p>
+                                </div>
+                                <hr class="m-0" />
+                                <div class="fs-6 p-3">
+                                  <p class="d-inline text-primary">
+                                    Praneeth's Wallet
+                                  </p>
+                                  <p class="d-inline pull-right text-success">
+                                    100000
+                                  </p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header bg-body-secondary p-3 fs-6" role="button" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">  
+                              <p class="d-inline fw-bold">
+                                Bank Account
+                              </p>
+                              <p class="d-inline pull-right text-success">
+                                1000000
+                              </p>
+                            </div>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Praveen's Kotak
+                                </p>
+                                <p class="d-inline pull-right text-success">
+                                  200000
+                                </p>
+                              </div>
+                              <hr class="m-0" />
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Praveen's Indus
+                                </p>
+                                <p class="d-inline pull-right text-success">
+                                  50000
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <div class="accordion-header bg-body-secondary p-3 fs-6" role="button" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">  
+                              <p class="d-inline fw-bold">
+                                Credit
+                              </p>
+                              <p class="d-inline pull-right text-danger">
+                                0
+                              </p>
+                            </div>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Praveen's Kotak
+                                </p>
+                                <p class="d-inline pull-right text-danger">
+                                  0
+                                </p>
+                              </div>
+                              <hr class="m-0" />
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Praneeth's HDFC
+                                </p>
+                                <p class="d-inline pull-right text-danger">
+                                  0
+                                </p>
+                              </div>
+                              <hr class="m-0" />
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Shalin's HDFC
+                                </p>
+                                <p class="d-inline pull-right text-danger">
+                                  0
+                                </p>
+                              </div>
+                              <hr class="m-0" />
+                              <div class="fs-6 p-3">
+                                <p class="d-inline text-primary">
+                                  Shalin's SCB
+                                </p>
+                                <p class="d-inline pull-right text-danger">
+                                  0
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+            </div>
+            <div class="col-7">
+                <h5 class="collapse-item" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="true" aria-controls="collapseExample">
+                    NET WORTH
+                </h5>
+                <div class="collapse accordion show" id="collapseExample2">
+                  <div class="accordion-item">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Expenses</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Transfer</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Income</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="row">
+                          <div class="col-8 test1">
+                            <span style=" margin-left: 20px;">
+                              From
+                            </span>
+                            <div class="dropdown" style="width:auto">
+                              <select class="form-select" aria-label="">
+                                <option selected>Amma's Wallet</option>
+                                <option value="1">Praneeth's Wallet</option>
+                                <option value="2">Praveen's Kotak</option>
+                                <option value="3">Praveen's Indus</option>
+                                <option value="4">Praveen's Kotak</option>
+                                <option value="5">Praneeth's HDFC</option>
+                                <option value="6">Shaalu's HDFC</option>
+                                <option value="7">Shaalu's SCB</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="wrapper">
+                              <form class="form-inline">
+                                <label class="sr-only" for="inlineFormInputGroup">Amount</label>
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0 mt-4">
+                                  <div class="input-group-addon currency-symbol mt-2">$</div>
+                                  <input type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" size="8">
+                                  <div class="input-group-addon currency-addon">
+                                    <select class="currency-selector">
+                                      <option data-symbol="$" data-placeholder="0.00" selected>USD</option>
+                                      <option data-symbol="€" data-placeholder="0.00">EUR</option>
+                                      <option data-symbol="£" data-placeholder="0.00">GBP</option>
+                                      <option data-symbol="¥" data-placeholder="0">JPY</option>
+                                      <option data-symbol="$" data-placeholder="0.00">CAD</option>
+                                      <option data-symbol="$" data-placeholder="0.00">AUD</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8 ">
+                            <span style=" margin-left: 20px;">
+                              Tags
+                            </span>
+                            <div class="dropdown">
+                              <!-- <select class="form-select" multiple aria-label="multiple select example>
+                                <option selected>Groceries</option>
+                                <option value="1">Restaurent</option>
+                                <option value="2">Rent</option>
+                                <option value="3">Income Tax</option>
+                                <option value="4">Social Security</option>
+                                <option value="5">Utilities</option>
+                                <option value="6">Food</option>
+                                <option value="7">Shopping</option>
+                                <option value="8">Clothes</option>
+                                <option value="9">Vacation</option>
+                              </select> -->
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="wrapper">
+                              <form class="form-inline">
+                                <label class="sr-only" for="inlineFormInputGroup">Amount</label>
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0 mt-4">
+                                  <div class="input-group-addon currency-symbol mt-2">$</div>
+                                  <input type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" size="8">
+                                  <div class="input-group-addon currency-addon">
+                                    <select class="currency-selector">
+                                      <option data-symbol="$" data-placeholder="0.00" selected>USD</option>
+                                      <option data-symbol="€" data-placeholder="0.00">EUR</option>
+                                      <option data-symbol="£" data-placeholder="0.00">GBP</option>
+                                      <option data-symbol="¥" data-placeholder="0">JPY</option>
+                                      <option data-symbol="$" data-placeholder="0.00">CAD</option>
+                                      <option data-symbol="$" data-placeholder="0.00">AUD</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="col-8">
+                            <input class="form-control" style="margin: 10px;" type="text" placeholder="Note">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        
+                      </div>
+                      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+  
+</html>

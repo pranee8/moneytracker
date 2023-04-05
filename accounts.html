@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zero To hero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+      .container{
+            background-color: #cce2ff;
+        }
+        #navbarNav > ul > li > a {
+          color: #ffffff;
+        }
+        .section-header {
+          display: flex;
+          justify-content:space-between;
+        }
+        .section-header-bg{
+          background-color: rgba(77,78,80,.05);
+        }
+        .section-header-accounts{
+            display: flex;
+        }
+        .nav-tabs>.nav-item>.active{
+          background: rgba(0,0,0,.05);
+        }
+        .nav-tabs>.nav-item>.nav-link:hover{
+            background-color: rgba(0,0,0,.05);
+            color: rgba(0,0,0,.95);
+        }
+        .dropdown-menu 
+        {
+            min-width:321px;
+        }
+        .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+        .btn-labeled {padding-top: 0;padding-bottom: 0;}
+        .btn { margin-bottom:10px; }
+         
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg" style="background-color: #3f51b5;">
+      <div class="container-fluid" >
+        <img src="Images/Z2H.png" class="rounded float-start img-responsive d-block" alt="Logo"  style="width: 4rem;">
+        <a class="navbar-brand ms-1" href="#" style="color: white ;">Charvik</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Transactions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reports</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded mt-5">
+      <div class="row">
+            <div class="col-">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <button type="button" class="btn btn-labeled btn-secondary bg-transparent text-bg-info border m-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                        <span class="btn-label"><i class="bi bi-plus-lg"></i></span>New
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div id="panelsStayOpen-collapseOneLeft" class="accordion-collapse collapse show modelStyle" aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="section-header-accounts w-100 p-3">
+                                        <i class="bi bi-file-earmark fs-4 "></i>
+                                        <p class="m-0 pt-2 ps-1">NEW ACCOUNT</p>
+                                    </div>
+                                    <hr class="hr" />
+                                    <div class="row p-3">
+                                        <div class="col-7">
+                                            <form>
+                                                <div class="mb-3">
+                                                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-5">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <div>
+                                                        <label for="from" class="form-label">Group</label>
+                                                        <select id="from" class="form-select" aria-label="Default select example" style="">
+                                                          <option value="1" selected>Cash</option>
+                                                          <option value="2">Bank Account</option>
+                                                          <option value="3">Deposit</option>
+                                                          <option value="4">Credit</option>
+                                                          <option value="5">Asset</option>
+                                                        </select>
+                                                      </div>
+                                                </div> 
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <form>
+                                            <div class="mb-3 p-3">
+                                              <label for="exampleInputEmail1" class="form-label">Amount</label>
+                                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <hr class="hr" />
+                                    <div class="row">
+                                        <div class="d-grid gap-2 p-5">
+                                            <button class="btn btn-primary" type="button">Save Account</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body p-0">
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item border-start-0 border-end-0">
+                                <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <p class="m-0"><strong>CASH</strong></p>
+                                <p class="m-0"><strong>800000</strong></p>
+                                </div>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Amma Wallet</p>
+                                    <p class="m-0">8000000</p> 
+                                </div>
+                                <hr class="hr m-0" />
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Praneeth's Wallet</p>
+                                    <p class="m-0">8000000</p> 
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-start-0 border-end-0">
+                                <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingTwo" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                <p class="m-0"><strong>Bank Account</strong></p>
+                                <p class="m-0"><strong>800000</strong></p>
+                                </div>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Cheking</p>
+                                    <p class="m-0">8000000</p> 
+                                </div>
+                                <hr class="hr m-0" />
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Savings</p>
+                                    <p class="m-0">8000000</p> 
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-start-0 border-end-0">
+                                <div class="accordion-header section-header w-100  pb-0 section-header-bg" id="panelsStayOpen-headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <p class="m-0"><strong>Credit</strong></p>
+                                <p class="m-0"><strong>800000</strong></p>
+                                </div>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Praneeth HDFC</p>
+                                    <p class="m-0 pull-right">150000</p> 
+                                </div>
+                                <hr class="hr" />
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Praveen Kotak</p>
+                                    <p class="m-0 pull-right">150000</p> 
+                                </div>
+                                <hr class="hr m-0" />
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Shalini HDFC</p>
+                                    <p class="m-0 pull-right">250000</p> 
+                                </div>
+                                <hr class="hr m-0" />
+                                <div class="accordion-body section-header">
+                                    <p class="m-0">Shalini SCB</p>
+                                    <p class="m-0 pull-right">100000</p> 
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script>
+        var KTBootstrapDaterangepicker = function () {
+
+// Private functions
+var demos = function () {
+    // predefined ranges
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    $('#kt_daterangepicker_6').daterangepicker({
+        buttonClasses: ' btn',
+        applyClass: 'btn-primary',
+        cancelClass: 'btn-secondary',
+
+        startDate: start,
+        endDate: end,
+        ranges: {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, function(start, end, label) {
+        $('#kt_daterangepicker_6 .form-control').val( start.format('MM/DD/YYYY') + ' / ' + end.format('MM/DD/YYYY'));
+    });
+}
+
+return {
+    // public functions
+    init: function() {
+        demos();
+    }
+};
+}();
+
+jQuery(document).ready(function() {
+KTBootstrapDaterangepicker.init();
+});
+    </script>
+  </head>
+  <body>
+    <div class="card card-custom">
+        <div class="card-header">
+            <h3 class="card-title">
+                Bootstrap Date Range Picker Examples
+            </h3>
+        </div>
+        <!--begin::Form-->
+        <form class="form">
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-form-label text-right col-lg-3 col-sm-12">Predefined Ranges</label>
+                    <div class="col-lg-4 col-md-9 col-sm-12">
+                        <div class='input-group' id='kt_daterangepicker_6'>
+                            <input type='text' class="form-control" readonly  placeholder="Select date range"/>
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </form>
+        <!--end::Form-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
