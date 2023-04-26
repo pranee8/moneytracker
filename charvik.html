@@ -6,6 +6,7 @@
     <title>Zero To hero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <style>
       .container{
             background-color: #cce2ff;
@@ -28,6 +29,25 @@
             background-color: rgba(0,0,0,.05);
             color: rgba(0,0,0,.95);
         }
+        #collapseRecentTransaction ul li {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px dotted black;
+          padding: 10px;
+        }
+
+        #collapseRecentTransaction ul li:last-child {
+          border-bottom: none;
+        }
+
+        #collapseRecentTransaction ul li i {
+          border: 1px solid black;
+          padding: 5px;
+          border-radius: 15px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
     </style>
   </head>
   <body>
@@ -42,13 +62,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+              <a class="nav-link" aria-current="page" href="charvik.html">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Transactions</a>
+              <a class="nav-link" href="charvik2.html">Transactions</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Accounts</a>
+              <a class="nav-link" href="accounts.html">Accounts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Reports</a>
@@ -59,118 +79,128 @@
     </nav>
     <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded mt-5">
       <div class="row">
-            <div class="col-5">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <div class="accordion-header section-header w-100 p-3" id="headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <p class="m-0"><strong>NET WORTH</strong></p>
-                    <p class="m-0"><strong>800000</strong></p>
-                  </div>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body p-0">
-                        <div class="accordion" id="accordionPanelsStayOpenExample">
-                            <div class="accordion-item">
-                              <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <p class="m-0"><strong>CASH</strong></p>
-                                <p class="m-0"><strong>800000</strong></p>
-                              </div>
-                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Amma Wallet</p>
-                                  <p class="m-0">8000000</p> 
-                                </div>
-                                <hr class="hr" />
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Praneeth's Wallet</p>
-                                  <p class="m-0">8000000</p> 
-                                </div>
-                              </div>
+        <div class="col-5">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <div class="accordion-header section-header w-100 p-3" id="headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <p class="m-0"><strong>NET WORTH</strong></p>
+                <p class="m-0"><strong>800000</strong></p>
+              </div>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body p-0">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <p class="m-0"><strong>CASH</strong></p>
+                            <p class="m-0"><strong>800000</strong></p>
+                          </div>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Amma Wallet</p>
+                              <p class="m-0">8000000</p> 
                             </div>
-                            <div class="accordion-item">
-                              <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingTwo" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                <p class="m-0"><strong>Bank Account</strong></p>
-                                <p class="m-0"><strong>800000</strong></p>
-                              </div>
-                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Cheking</p>
-                                  <p class="m-0">8000000</p> 
-                                </div>
-                                <hr class="hr" />
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Savings</p>
-                                  <p class="m-0">8000000</p> 
-                                </div>
-                              </div>
+                            <hr class="hr" />
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Praneeth's Wallet</p>
+                              <p class="m-0">8000000</p> 
                             </div>
-                            <div class="accordion-item">
-                              <!-- <div class="accordion-header" id="panelsStayOpen-headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                <button class="accordion-button collapsed btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style="display: block;">
-                                  <strong>CREDIT</strong>
-                                </button>
-                              </div> -->
-                              <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <p class="m-0"><strong>Credit</strong></p>
-                                <p class="m-0"><strong>800000</strong></p>
-                              </div>
-                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Praneeth HDFC</p>
-                                  <p class="m-0 pull-right">150000</p> 
-                                </div>
-                                <hr class="hr" />
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Praveen Kotak</p>
-                                  <p class="m-0 pull-right">150000</p> 
-                                </div>
-                                <hr class="hr" />
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Shalini HDFC</p>
-                                  <p class="m-0 pull-right">250000</p> 
-                                </div>
-                                <hr class="hr" />
-                                <div class="accordion-body section-header">
-                                  <p class="m-0">Shalini SCB</p>
-                                  <p class="m-0 pull-right">100000</p> 
-                                </div>
-                              </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingTwo" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <p class="m-0"><strong>Bank Account</strong></p>
+                            <p class="m-0"><strong>800000</strong></p>
+                          </div>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Cheking</p>
+                              <p class="m-0">8000000</p> 
                             </div>
+                            <hr class="hr" />
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Savings</p>
+                              <p class="m-0">8000000</p> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <!-- <div class="accordion-header" id="panelsStayOpen-headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            <button class="accordion-button collapsed btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style="display: block;">
+                              <strong>CREDIT</strong>
+                            </button>
+                          </div> -->
+                          <div class="accordion-header section-header w-100 p-3 section-header-bg" id="panelsStayOpen-headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <p class="m-0"><strong>Credit</strong></p>
+                            <p class="m-0"><strong>800000</strong></p>
+                          </div>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Praneeth HDFC</p>
+                              <p class="m-0 pull-right">150000</p> 
+                            </div>
+                            <hr class="hr" />
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Praveen Kotak</p>
+                              <p class="m-0 pull-right">150000</p> 
+                            </div>
+                            <hr class="hr" />
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Shalini HDFC</p>
+                              <p class="m-0 pull-right">250000</p> 
+                            </div>
+                            <hr class="hr" />
+                            <div class="accordion-body section-header">
+                              <p class="m-0">Shalini SCB</p>
+                              <p class="m-0 pull-right">100000</p> 
+                            </div>
+                          </div>
                         </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-7">
-              <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                  <!-- <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneLeft" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                      NEW TRANSACTION
-                    </button>
-                  </h2> -->
-                  <div class="accordion-header section-header w-100 p-3" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneLeft" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    <p class="m-0"><strong>NEW TRANSACTION</strong></p>
-                    
-                  </div>
-                  <div id="panelsStayOpen-collapseOneLeft" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body accordionTab">
-                      <ul class="nav nav-tabs">
-                        <li class="nav-item active flex-grow-1">
-                          <a class="nav-link active" data-bs-toggle="tab" href="#msg">Expense</a>
-                        </li>
-                        <li class="nav-item flex-grow-1">
-                          <a class="nav-link" data-bs-toggle="tab" href="#pro">Transfer</a>
-                        </li>
-                        <li class="nav-item flex-grow-1">
-                          <a class="nav-link" data-bs-toggle="tab" href="#set">Income</a>
-                        </li>
-                      </ul>
-                      
-                      <!-- Tab panes -->
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="msg">
-                          <h6 class="pt-3">From</h6>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <!-- <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneLeft" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  NEW TRANSACTION
+                </button>
+              </h2> -->
+              <div class="accordion-header section-header w-100 p-3" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneLeft" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <p class="m-0"><strong>NEW TRANSACTION</strong></p>  
+              </div>
+              <div id="panelsStayOpen-collapseOneLeft" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body accordionTab">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item active flex-grow-1">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#msg">Expense</a>
+                    </li>
+                    <li class="nav-item flex-grow-1">
+                      <a class="nav-link" data-bs-toggle="tab" href="#pro">Transfer</a>
+                    </li>
+                    <li class="nav-item flex-grow-1">
+                      <a class="nav-link" data-bs-toggle="tab" href="#set">Income</a>
+                    </li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="msg">
+                      <h6 class="pt-3">From</h6>
+                      <select class="form-select bg-body-tertiary" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                      </select>
+                      <h6 class="pt-3">Tags</h6>
+                      <div class="row">
+                        <div class="col-8">
                           <select class="form-select bg-body-tertiary" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
@@ -180,184 +210,181 @@
                             <option value="5">Five</option>
                             <option value="6">Six</option>
                           </select>
-                          <h6 class="pt-3">Tags</h6>
-                          <div class="row">
-                            <div class="col-8">
-                              <select class="form-select bg-body-tertiary" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                                <option value="6">Six</option>
-                              </select>
-                            </div>
-                            <div class="col-4">
-                              <input id="startDate" class="form-control" type="date" />
-                            </div>
-                          </div>  
-                          <div class="row">
-                            <div class="col-8 mt-4">
-                              <input type="text" class="form-control">
-                            </div>
-                            <div class="col-4 mt-4">
-                              <input class="btn btn-primary form-control" type="submit" value="Add Expense">
-                            </div>
-                          </div>      
                         </div>
-                        <div class="tab-pane fade" id="pro">
-                          <h6 class="pt-3">From</h6>
-                            <select class="form-select bg-body-tertiary" aria-label="Default select example">
-                              <option selected>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                              <option value="5">Five</option>
-                              <option value="6">Six</option>
-                            </select>
-                            <h6 class="pt-3">To</h6>
-                            <div class="row">
-                                <select class="form-select bg-body-tertiary" aria-label="Default select example">
-                                  <option selected>Open this select menu</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                  <option value="4">Four</option>
-                                  <option value="5">Five</option>
-                                  <option value="6">Six</option>
-                                </select>
-                            </div>  
-                            <div class="row">
-                              <div class="col-8 mt-4">
-                                <input type="text" class="form-control">
-                              </div>
-                              <div class="col-4 mt-4">
-                                  <input id="startDate" class="form-control" type="date" />
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-8">
-
-                              </div>
-                              <div class="col-4 mt-4">
-                                  <input class="btn btn-primary form-control" type="submit" value="Add Transfer">
-                              </div>
-                            </div> 
+                        <div class="col-4">
+                          <input id="startDate" class="form-control" type="date" />
                         </div>
-                        <div class="tab-pane fade" id="set">
-                          <h6 class="pt-3">From</h6>
-                            <select class="form-select bg-body-tertiary" aria-label="Default select example">
-                              <option selected>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                              <option value="5">Five</option>
-                              <option value="6">Six</option>
-                            </select>
-                            <h6 class="pt-3">Tags</h6>
-                            <div class="row">
-                              <div class="col-8">
-                                <select class="form-select bg-body-tertiary" aria-label="Default select example">
-                                  <option selected>Open this select menu</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                  <option value="4">Four</option>
-                                  <option value="5">Five</option>
-                                  <option value="6">Six</option>
-                                </select>
-                              </div>
-                              <div class="col-4">
-                                <input id="startDate" class="form-control" type="date" />
-                              </div>
-                            </div> 
-                            <div class="row">
-                              <div class="col-8 mt-4">
-                                <input type="text" class="form-control">
-                              </div>
-                              <div class="col-4 mt-4">
-                                <input class="btn btn-primary form-control" type="submit" value="Add Income">
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <div class="accordion-header section-header w-100 p-3" id="panelsStayOpen-headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOneLeftDown" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    <p class="m-0"><strong>RECENT TRANSACTIONS</strong></p>
-                  </div>
-                  <div id="panelsStayOpen-collapseOneLeftDown" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div class="accordion-body">
+                      </div>  
                       <div class="row">
-                        <div class="col-12">
-                          <ul class="list-group w-100">
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                                <p class="m-0">
-                                  Cras justo odio
-                                </p>
-                                <a class="btn text-white"
-                                style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                    <i class="fas fa-pencil-alt fa-1x"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                              <p class="m-0">
-                                Cras justo odio
-                              </p>
-                              <a class="btn text-white"
-                              style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                  <i class="fas fa-pencil-alt fa-1x"></i>
-                              </a>
-                            </li>
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                              <p class="m-0">
-                                Cras justo odio
-                              </p>
-                              <a class="btn text-white"
-                              style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                  <i class="fas fa-pencil-alt fa-1x"></i>
-                              </a>
-                            </li>
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                              <p class="m-0">
-                                Cras justo odio
-                              </p>
-                              <a class="btn text-white"
-                              style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                  <i class="fas fa-pencil-alt fa-1x"></i>
-                              </a>
-                            </li>
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                              <p class="m-0">
-                                Cras justo odio
-                              </p>
-                              <a class="btn text-white"
-                              style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                  <i class="fas fa-pencil-alt fa-1x"></i>
-                              </a>
-                            </li>
-                            <li class="list-group-item align-items-center d-flex justify-content-between">
-                              <p class="m-0">
-                                Cras justo odio
-                              </p>
-                              <a class="btn text-white"
-                              style="background-color: hsl(330, 70%, 50%);" href="#!" role="button">
-                                  <i class="fas fa-pencil-alt fa-1x"></i>
-                              </a>
-                            </li>
-                          </ul>
+                        <div class="col-8 mt-4">
+                          <input type="text" class="form-control">
                         </div>
-                      </div>
+                        <div class="col-4 mt-4">
+                          <input class="btn btn-primary form-control" type="submit" value="Add Expense">
+                        </div>
+                      </div>      
+                    </div>
+                    <div class="tab-pane fade" id="pro">
+                      <h6 class="pt-3">From</h6>
+                        <select class="form-select bg-body-tertiary" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                          <option value="6">Six</option>
+                        </select>
+                        <h6 class="pt-3">To</h6>
+                        <div class="row">
+                            <select class="form-select bg-body-tertiary" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                              <option value="4">Four</option>
+                              <option value="5">Five</option>
+                              <option value="6">Six</option>
+                            </select>
+                        </div>  
+                        <div class="row">
+                          <div class="col-8 mt-4">
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-4 mt-4">
+                              <input id="startDate" class="form-control" type="date" />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">
+
+                          </div>
+                          <div class="col-4 mt-4">
+                              <input class="btn btn-primary form-control" type="submit" value="Add Transfer">
+                          </div>
+                        </div> 
+                    </div>
+                    <div class="tab-pane fade" id="set">
+                      <h6 class="pt-3">From</h6>
+                        <select class="form-select bg-body-tertiary" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                          <option value="4">Four</option>
+                          <option value="5">Five</option>
+                          <option value="6">Six</option>
+                        </select>
+                        <h6 class="pt-3">Tags</h6>
+                        <div class="row">
+                          <div class="col-8">
+                            <select class="form-select bg-body-tertiary" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                              <option value="4">Four</option>
+                              <option value="5">Five</option>
+                              <option value="6">Six</option>
+                            </select>
+                          </div>
+                          <div class="col-4">
+                            <input id="startDate" class="form-control" type="date" />
+                          </div>
+                        </div> 
+                        <div class="row">
+                          <div class="col-8 mt-4">
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-4 mt-4">
+                            <input class="btn btn-primary form-control" type="submit" value="Add Income">
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
+            <h5 class="collapse-item mt-3" style="text-transform: uppercase;" data-bs-toggle="collapse"
+              href="#collapseRecentTransaction" role="button" aria-expanded="true" aria-controls="collapseNetWorth">
+              Recent Transactions
+            </h5>
+            <div class="collapse show" id="collapseRecentTransaction">
+              <ul class="p-0 m-0 border rounded">
+                <li>
+                  <span>20 Mar Amma's wallet</span>
+                  <span><span class="text-success">1000</span> <i class="bi-pencil" data-bs-target="#editTransaction"
+                      data-bs-toggle="modal"></i>
+                  </span>
+                </li>
+                <li>
+                  <span>20 Mar Amma's wallet</span>
+                  <span><span class="text-danger">-100</span> <i class="bi-pencil" data-bs-target="#editTransaction"
+                      data-bs-toggle="modal"></i>
+                  </span>
+                </li>
+                <li>
+                  <span>20 Mar Amma's wallet</span>
+                  <span><span class="text-danger">-100</span> <i class="bi-pencil" data-bs-target="#editTransaction"
+                      data-bs-toggle="modal"></i>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div> 
+          <div class="modal fade" id="editTransaction" aria-hidden="true" aria-labelledby="editTransactionToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="editTransactionToggleLabel">Edit Transaction</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="btn-group w-100" role="group" aria-label="Basic example">
+                    <input type="radio" class="btn-check" name="transactionType" id="option1" autocomplete="off" checked>
+                    <label class="btn btn-secondary" for="option1">Income</label>
+                    <input type="radio" class="btn-check" name="transactionType" id="option2" autocomplete="off">
+                    <label class="btn btn-secondary" for="option2">Expense</label>
+                  </div>
+                  <div class="mt-2">
+                    <label for="from" class="form-label">From</label>
+                    <select id="from" class="form-select" aria-label="Default select example">
+                      <option value="" selected>Please select from</option>
+                      <option value="1">Amma's Wallet</option>
+                      <option value="2">Praneeth's Wallet</option>
+                    </select>
+                  </div>
+                  <div class="mt-2">
+                    <label for="tags" class="form-label">Tags</label>
+                    <select id="tags" class="form-select" aria-label="Default select example">
+                      <option value="" selected>Please select tags</option>
+                      <option value="1">Graceries</option>
+                      <option value="2">Restaurent</option>
+                    </select>
+                  </div>
+                  <div class="mt-2 d-flex">
+                    <div class="flex-grow-1 me-2">
+                      <label for="note" class="form-label">Note</label>
+                      <input type="text" class="form-control" id="note" placeholder="Please enter note">
+                    </div>
+                    <div class="flex-grow-2">
+                      <label for="date" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="date" placeholder="dd/mm/yyyy">
+                    </div>
+                  </div>
+                  <hr class="mb-2" />
+                  <div class="d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-primary">Save Expense</button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-danger">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
